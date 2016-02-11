@@ -10,14 +10,27 @@ li {
   font-family: "Source Sans Pro";
 }
 
-h1 {
-  font-family: "Playfair Display";
-}
 
 h2 {
-  font-family: "Playfair Display";
   font-style: italic;
   font-size: 20px;
+}
+
+.homepage-face {
+  height: 380px;
+  width: 285px;
+  display: block;
+  margin: 0 250px;
+}
+
+.welcome-header {
+  font-family: "Playfair Display";
+  text-align: center;
+}
+
+.welcome-description {
+  font-family: "Playfair Display";
+  text-align: center;
 }
 
 .cicelly {
