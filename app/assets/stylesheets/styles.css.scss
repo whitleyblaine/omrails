@@ -16,12 +16,43 @@ h2 {
   font-size: 20px;
 }
 
+.form-header {
+    margin: -5px 0px 20px 0 ;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #EDEDED;
+    border-radius: 3px 3px 0 0;
+}
+
+
+.account-cancel-margin {
+  margin-top: 3px;
+  padding-top: 3px;
+}
+
+.profile-edit-margin {
+  margin-bottom: 1px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
 .homepage-face {
   height: 380px;
   width: 285px;
   display: block;
   margin: 0 250px;
 }
+
+.form-header {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.black-background {background-color:#000000;}
+
+.white {color: #ffffff;}
+.red {color: red;}
 
 .welcome-header {
   font-family: "Playfair Display";
