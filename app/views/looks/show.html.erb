@@ -4,8 +4,12 @@
       <p>
         <%= @look.description %>
       </p>
-
-      <%= link_to 'Edit', edit_look_path(@look) %> |
+      <p>
+        <%= @look.user.first_name %> <%= @look.user.last_name %>
+      </p>
+      <% if current_user == @look.user %>
+        <%= link_to 'Edit', edit_look_path(@look) %> | 
+      <% end %>
       <%= link_to 'Back', looks_path %>
     </div>
   </div>

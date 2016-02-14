@@ -1,6 +1,11 @@
  <tr>
   <td><%= look.description %></td>
   <td><%= link_to 'Show', look %></td>
-  <td><%= link_to 'Edit', edit_look_path(look) %></td>
-  <td><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% if current_user == look.user %>
+    <td><%= link_to 'Edit', edit_look_path(look) %></td>
+    <td><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% else %>
+    <td></td>
+    <td></td>
+  <% end %>
 </tr>

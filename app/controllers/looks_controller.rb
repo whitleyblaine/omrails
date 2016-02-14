@@ -1,4 +1,5 @@
 class LooksController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   before_action :set_look, only: [:show, :edit, :update, :destroy]
 
   # GET /looks
@@ -14,17 +15,18 @@ class LooksController < ApplicationController
 
   # GET /looks/new
   def new
-    @look = Look.new
+    @look = current_user.looks.new
   end
 
   # GET /looks/1/edit
   def edit
+    @look = current_user.looks.find(params[:id])
   end
 
   # POST /looks
   # POST /looks.json
   def create
-    @look = Look.new(look_params)
+    @look = current_user.looks.new(look_params)
 
     respond_to do |format|
       if @look.save
@@ -40,6 +42,7 @@ class LooksController < ApplicationController
   # PATCH/PUT /looks/1
   # PATCH/PUT /looks/1.json
   def update
+    @look = current_user.looks.find(params[:id])
     respond_to do |format|
       if @look.update(look_params)
         format.html { redirect_to @look, notice: 'Look was successfully updated.' }
@@ -54,6 +57,7 @@ class LooksController < ApplicationController
   # DELETE /looks/1
   # DELETE /looks/1.json
   def destroy
+    @look = current_user.looks.find(params[:id])
     @look.destroy
     respond_to do |format|
       format.html { redirect_to looks_url, notice: 'Look was successfully destroyed.' }
