@@ -5,7 +5,7 @@ class LooksController < ApplicationController
   # GET /looks
   # GET /looks.json
   def index
-    @looks = Look.all
+    @looks = Look.order("created_at desc")
   end
 
   # GET /looks/1

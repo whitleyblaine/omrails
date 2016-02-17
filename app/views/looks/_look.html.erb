@@ -1,13 +1,16 @@
- <tr>
-  <td><%= image_tag look.image.url(:medium) %> </td>
-  <td><%= look.description %></td>
-  <td><%= look.user.username %></td>
-  <td><%= link_to 'Show', look %></td>
+
+<div class="box">
+  <%= link_to (image_tag look.image.url(:medium)), look %>
+  <p class="username">
+    <strong>
+      Posted by <%= look.user.username %>
+    </strong>
+  </p>
   <% if current_user == look.user %>
-    <td><%= link_to 'Edit', edit_look_path(look) %></td>
-    <td><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <p>
+    <%= link_to 'Edit', edit_look_path(look) %> <br>
+    <%= link_to 'Delete', look, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
   <% else %>
-    <td></td>
-    <td></td>
   <% end %>
-</tr>
+</div>
