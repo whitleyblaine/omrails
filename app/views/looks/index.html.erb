@@ -1,3 +1,25 @@
-<div id="looks">
+<% if user_signed_in? %>
   <%= render @looks %>
-</div>
+<% else %>
+
+  <div class="col-md-9">
+    <h1 class="welcome-header">Welcome to Picturesque!</h1>
+    <h2 class="welcome-description">The #1 source for beauty inspiration from real people around the world.</h2>
+    <h2 class="welcome-description">Check out the latest looks below...</h2>
+
+    <div id="looks" class="home-looks">
+      <%= render @looks %>
+    </div>
+  </div>
+
+  <div class="col-md-3 cicelly">
+    <h2 class="text-center">What people are saying!</h2><br>
+    <p class="text-center"> "I guarantee this will be your new <i>favourite</i> website." -Cicelly </p>
+    <p class="text-center"> "Wow, so cool!." -Allison </p>
+    <p class="text-center"> "Dude this website is the best." -Ryan </p>
+    <p class="text-center"> "Oh my god I'm so jealous of your nails." -Some random lady </p>
+
+  </div>
+
+<% end %>
+
