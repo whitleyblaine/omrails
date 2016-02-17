@@ -73,6 +73,6 @@ class LooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def look_params
-      params.require(:look).permit(:description)
+      params.require(:look).permit(:description, :image)
     end
 end

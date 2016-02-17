@@ -7,6 +7,9 @@ gem 'devise'
 gem 'rails', '4.2.5.1'
 # Use simple_form to make forms nicer
 gem 'simple_form'
+# Use paperclip for image upload
+gem "paperclip", "~> 4.3"
+
 
 group :production do
   gem 'pg'

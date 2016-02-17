@@ -1,5 +1,7 @@
  <tr>
+  <td><%= image_tag look.image.url(:medium) %> </td>
   <td><%= look.description %></td>
+  <td><%= look.user.username %></td>
   <td><%= link_to 'Show', look %></td>
   <% if current_user == look.user %>
     <td><%= link_to 'Edit', edit_look_path(look) %></td>
