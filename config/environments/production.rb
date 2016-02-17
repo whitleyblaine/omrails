@@ -79,4 +79,15 @@ Rails.application.configure do
 
   # Added for Devise gem. Remember to change "host" to the actual host of your app on production!!
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Paperclip should user amazon S3 on heroku
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "picturesque1",
+    :access_key_id => "AKIAIKLCEIJKJUO44KEQ",
+    :secret_access_key => "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"
+  }
+}
 end
+

@@ -9,6 +9,9 @@ gem 'rails', '4.2.5.1'
 gem 'simple_form'
 # Use paperclip for image upload
 gem "paperclip", "~> 4.3"
+# Amazon Web Services for paperclip file storage
+gem 'aws-sdk'
+
 
 
 group :production do
