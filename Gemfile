@@ -10,7 +10,7 @@ gem 'simple_form'
 # Use paperclip for image upload
 gem "paperclip", "~> 4.3"
 # Amazon Web Services for paperclip file storage
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 
 
